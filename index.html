@@ -591,6 +591,89 @@
             opacity: 0.9;
         }
         
+        /* Contact Section */
+        #contact {
+            background: var(--section-light);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p, .contact-text a {
+            color: #666;
+        }
+        
+        .contact-form {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(94, 96, 206, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
         /* Footer */
         footer {
             background: var(--section-dark);
@@ -899,60 +982,3 @@
                         <i class="fas fa-tasks"></i>
                     </div>
                     <h3>Project Management</h3>
-                    <ul class="skill-list">
-                        <li>Agile and Scrum methodologies</li>
-                        <li>Budget optimization</li>
-                        <li>Resource allocation</li>
-                        <li>Timeline management</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Digital Marketing</h3>
-                    <ul class="skill-list">
-                        <li>Social media campaigns</li>
-                        <li>Google and Meta Analytics</li>
-                        <li>Content strategy</li>
-                        <li>Influencer marketing</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Technical Skills</h3>
-                    <ul class="skill-list">
-                        <li>MS Office, HubSpot, Adobe</li>
-                        <li>CSS & HTML fundamentals</li>
-                        <li>Salesforce, Wrike, JIRA</li>
-                        <li>Asana, OPERA Cloud</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Certifications</h3>
-                    <ul class="skill-list">
-                        <li>Project Management Professional (PMP)</li>
-                        <li>CIMA (PMI)</li>
-                        <li>Google Analytics</li>
-                        <li>Languages: English & Hindi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="timeline-date">Jul 2024 - Oct 2024</span>
-                        <h3 class="timeline-title">European Diplomats</h3>
-                        <h
