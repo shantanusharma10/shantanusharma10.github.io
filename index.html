@@ -1,1 +1,522 @@
-My name is Shantanu Sharma.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shantanu Sharma - Portfolio</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .profile {
+            margin-bottom: 20px;
+        }
+        
+        .profile h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .profile h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            color: var(--light-color);
+        }
+        
+        .contact-info {
+            margin-top: 20px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        .contact-info a {
+            color: var(--light-color);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Sections */
+        section {
+            padding: 50px 0;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        section h2::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto;
+        }
+        
+        /* About Section */
+        #about {
+            background-color: white;
+        }
+        
+        /* Skills Section */
+        #skills {
+            background-color: var(--light-color);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .skill-category ul {
+            list-style-type: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .skill-category li::before {
+            content: '•';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Experience Section */
+        #experience {
+            background-color: white;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--light-color);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        
+        .timeline-content p.date {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-content ul {
+            list-style-type: none;
+        }
+        
+        .timeline-content li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .timeline-content li::before {
+            content: '→';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Education Section */
+        #education {
+            background-color: var(--light-color);
+        }
+        
+        .education-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .education-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .education-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .education-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        
+        .education-item p.date {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        footer p {
+            margin: 10px 0;
+        }
+        
+        footer a {
+            color: var(--light-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="profile">
+                <h1>Shantanu Sharma</h1>
+                <h2>Project Management & Digital Marketing Professional</h2>
+            </div>
+            <div class="contact-info">
+                <p>📱 07741345349 | ✉️ sharmashantanu757@gmail.com</p>
+                <p>🔗 <a href="https://www.linkedin.com/in/sharma-shantanu" target="_blank">LinkedIn</a> | 📍 Dundee, UK</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>With 5 years of experience, I have led projects across the UK, USA, Canada, and India. As a self-motivated account manager and project management professional, I strategise and deliver campaigns, focusing on quality delivery. Skilled in budget optimisation, social media management, stakeholder engagement, and project execution, I am a solution-driven individual seeking new opportunities to advance my career. I have the right to work in the UK.</p>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Key Skills</h3>
+                    <ul>
+                        <li>Communication - Interacting with various stakeholders, organizing and conducting meetings and events</li>
+                        <li>Problem Solving - Effective problem identification in a timely manner</li>
+                        <li>Stakeholder Engagement - Developing effective relationships through quality project delivery</li>
+                        <li>Administrative & Clerical - Project Management tools and customer query handling</li>
+                        <li>Strategy Ideation - Developing effective strategies aligned with market demographics and psychographics</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Proficiency</h3>
+                    <ul>
+                        <li>Languages: English (Professional), Hindi (Native)</li>
+                        <li>Software: MS Office, Google and Meta Analytics, HubSpot, Adobe, CSS & HTML</li>
+                        <li>Project Management Tools: Salesforce, Wrike, Asana, JIRA, OPERA Cloud Management</li>
+                        <li>Certifications: Project Management Professional (PMP), CIMA (PMI), Google Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>European Diplomats</h3>
+                        <h4>Digital Marketing Specialist (Internship - Remote)</h4>
+                        <p class="date">July 2024 - Oct 2024</p>
+                        <ul>
+                            <li>Designed and developed European Diplomats Training Academy with record sales of £100K in its launch month</li>
+                            <li>Ensured effective task organization using tools like Dyzio, Notion, and JIRA</li>
+                            <li>Devised comprehensive marketing strategy increasing engagement by 232% in 1 month</li>
+                            <li>Won 2 tenders with £250K in revenue in July and August 2024</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>YAAP (Rainmaker Ventures Pvt. Ltd.)</h3>
+                        <h4>Assistant Manager - Client Servicing</h4>
+                        <p class="date">June 2022 - Dec 2023</p>
+                        <ul>
+                            <li>Independently collated government tenders and oversaw financial and technical aspects</li>
+                            <li>Developed detailed project plans including timelines, milestones, and resource allocation</li>
+                            <li>Managed third-party agency relationships and commercial ads/films across the country</li>
+                            <li>Built a robust database of over 500 vendors and increased average client revenue by 15%</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>WeBee Social</h3>
+                        <h4>Account Manager</h4>
+                        <p class="date">Sep 2021 - June 2022</p>
+                        <ul>
+                            <li>Coordinated print and PR activities with coverage in 30+ media publications per campaign</li>
+                            <li>Enhanced brand presence through influencer marketing campaigns and brand ad shoots</li>
+                            <li>Monitored campaign performance resulting in 30% increase in user engagement</li>
+                            <li>Co-produced TV commercial for Lotus Herbals leading to 23% increase in revenue</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Adaan Digital Solutions Pvt. Ltd.</h3>
+                        <h4>Key Account Manager</h4>
+                        <p class="date">Oct 2019 - July 2021</p>
+                        <ul>
+                            <li>Utilized agile and scrum methodologies leading to 30% increased efficiency</li>
+                            <li>Monitored programs and event cost allocations to support decision making</li>
+                            <li>Verified vendor invoices ensuring accuracy and compliance before processing payments</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>IHG Group of Hotels and Resorts</h3>
+                        <h4>Receptionist (Part-Time)</h4>
+                        <p class="date">April 2024 - Present</p>
+                        <ul>
+                            <li>Provided exceptional guest service in a professional and courteous manner</li>
+                            <li>Handled cash and credit card transactions during check-in and check-out</li>
+                            <li>Managed multi-line phone system and administrative tasks</li>
+                            <li>Effectively communicated with team members ensuring smooth operations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3>University of Dundee</h3>
+                    <h4>Masters of Science in Management, Strategy & Leadership</h4>
+                    <p class="date">Jan 2024 - Jan 2025</p>
+                    <p>Extra Curricular Activities: Member of Marketing Society</p>
+                </div>
+                <div class="education-item">
+                    <h3>Wilson College, University of Mumbai</h3>
+                    <h4>Bachelors of Management Studies</h4>
+                    <p class="date">June 2016 - June 2019</p>
+                    <p>Grade: Distinction (8.95/10)</p>
+                    <p>Extra Curricular Activities: Core Committee Member (Intercollegiate Festival)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Shantanu Sharma</p>
+            <p>📱 07741345349 | ✉️ <a href="mailto:sharmashantanu757@gmail.com">sharmashantanu757@gmail.com</a></p>
+            <p>🔗 <a href="https://www.linkedin.com/in/sharma-shantanu" target="_blank">LinkedIn</a> | 📍 Dundee, UK</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
