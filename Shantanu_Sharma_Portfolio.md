@@ -76,5 +76,3 @@ I'm a self-motivated professional with over five years of experience in project 
 
 - 📧 Email: [sharmashantanu757@gmail.com](mailto:sharmashantanu757@gmail.com)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/sharma-shantanu)
-
-> *Portfolio last updated: April 2025*
